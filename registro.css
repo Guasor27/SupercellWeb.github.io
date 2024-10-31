@@ -1,0 +1,122 @@
+/* Estilos generales */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background: linear-gradient(180deg, #003366, #1a75ff);
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    max-width: 400px;
+    padding: 20px;
+}
+
+.login-box {
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 20px 30px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.logo {
+    width: 100px;
+    margin-bottom: 20px;
+}
+
+h2 {
+    font-size: 1.2em;
+    color: #333;
+    margin-bottom: 10px;
+}
+
+p {
+    font-size: 0.9em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    background-color: #e0e0e0;
+    border-radius: 20px;
+    overflow: hidden;
+    height: 8px;
+    margin: 10px 0 20px 0;
+}
+
+.progress {
+    display: block;
+    width: 50%;
+    height: 100%;
+    background-color: #00cc99;
+}
+
+form input[type="email"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1em;
+}
+
+.info-text {
+    font-size: 0.8em;
+    color: #999;
+    margin: 10px 0;
+}
+
+.info-text a {
+    color: #0066cc;
+    text-decoration: none;
+}
+
+.btn-primary {
+    width: 100%;
+    padding: 12px;
+    margin-top: 15px;
+    background-color: #b3d1ff;
+    border: none;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.btn-secondary {
+    width: 100%;
+    padding: 12px;
+    margin-top: 10px;
+    background-color: #f0f0f0;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    color: #333;
+    font-weight: bold;
+    font-size: 1em;
+    cursor: pointer;
+}
+
+.footer-text {
+    font-size: 0.9em;
+    color: #666;
+    margin-top: 15px;
+}
+
+.footer-text a {
+    color: #0066cc;
+    text-decoration: none;
+}

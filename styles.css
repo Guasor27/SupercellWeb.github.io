@@ -1,0 +1,191 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f4f4f4; /* Fondo gris claro */
+  color: #333;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  background-image: repeating-linear-gradient(
+    135deg,
+    #e0e0e0,
+    #e0e0e0 20px, /* Ajusta este valor para líneas más gruesas */
+    #f4f4f4 20px,
+    #f4f4f4 40px /* Ajusta este valor para el espacio entre líneas */
+  ); /* Patrón de líneas de puntadas */
+}
+
+
+/* Encabezado */
+header {
+  background-color: #ffffff;
+  padding: 20px;
+  text-align: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+
+.logo {
+  width: 225px;
+  height: auto;
+}
+
+.login-button {
+  background-color: #000000;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.login-button:hover {
+  background-color: #005bb5;
+}
+
+/* Cuerpo principal */
+main {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* Estilo de la imagen en cada bloque */
+
+/* Animación para la caja de juego */
+
+.game-block {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #ffffff;
+  width: 80%; /* Ocupa más espacio */
+  padding: 20px;
+  margin: 10px 0;
+  text-align: center;
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: inherit; /* Hereda el color del texto del padre */
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+/* Estilo para enlaces dentro de .game-block */
+.game-block a {
+  text-decoration: none; /* Elimina el subrayado de los enlaces */
+  color: inherit; /* Hereda el color del texto del padre */
+}
+
+/* Para evitar que cambie de color cuando se visita */
+.game-block a:visited {
+  color: inherit; /* Mantiene el color original del texto */
+}
+
+/* Para evitar que aparezca subrayado en el foco (cuando se selecciona) */
+.game-block a:focus {
+  text-decoration: none; /* Elimina el subrayado cuando está en foco */
+  outline: none; /* Elimina el contorno por defecto del foco (opcional) */
+}
+
+.game-block:hover {
+  transform: scale(1.03); /* Escala más ligera del 3% */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra un poco más profunda */
+}
+
+/* Imagen dentro de la caja de juego */
+.game-block img {
+  width: 100%;
+  border-radius: 8px;
+  transition: transform 0.2s ease; /* Sin zoom adicional en la imagen */
+}
+
+.game-block h2 {
+  margin-top: 10px;
+  font-size: 1.2rem;
+  color: #333; /* Color del nombre del juego */
+  transition: color 0.2s ease;
+}
+
+/* Cambia el color del texto al hacer hover (opcional) */
+.game-block:hover h2 {
+  color: #005bb5; /* Cambia el color del texto al hacer hover (opcional) */
+}
+
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%; /* Ocupa toda la parte inferior de la página */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.app-links a {
+  color: white;
+  background: #333;
+  padding: 10px 15px;
+  margin: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.app-links a:hover {
+  background: #555;
+}
+
+.company-info {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
+}
+  
