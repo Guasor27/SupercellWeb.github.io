@@ -65,7 +65,43 @@ main {
   padding: 20px 0;
 }
 
-/* Estilo de la imagen en cada bloque */
+/* Caja para la imagen horizontal */
+.clickable-box {
+  display: block;
+  background: linear-gradient(to left, #fff9c4, #fbc02d); /* Degradado de amarillo */
+  border-radius: 8px;
+  width: 60%;
+  margin: 20px 0;
+  text-decoration: none;
+}
+
+.image-box {
+  width: 85%; /* Ajusta el tamaño según lo que necesites */
+  margin: 20px 0;
+  padding: 10px;
+  border-radius: 8px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Imagen dentro de la nueva caja */
+.image-box img {
+  width: 100%; /* Asegura que la imagen ocupe todo el ancho disponible de la caja */
+  height: auto;
+  border-radius: 8px;
+}
+
+/* Estilo de hover */
+.clickable-box {
+  transition: transform 0.3s ease-in-out, box-shadow 0.3s ease-in-out; /* Hacemos la transición suave al entrar y salir */
+}
+
+.clickable-box:hover {
+  transform: scale(1.02); /* Aumenta un poco el tamaño al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3); /* Sombra suave */
+}
+
 
 /* Animación para la caja de juego */
 
@@ -189,3 +225,101 @@ footer {
   margin-top: 10px;
 }
   
+/* Estilos para el modal de cookies */
+.cookie-modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo semitransparente */
+}
+
+.cookie-modal-content {
+  background-color: #ffffff;
+  margin: 5% auto;
+  padding: 20px;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 500px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  position: relative;
+  text-align: center;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.cookie-modal-content h2 {
+  font-size: 1.8em;
+  margin-bottom: 20px;
+  color: #333;
+}
+
+.cookie-option {
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.cookie-option h3 {
+  font-size: 1.2em;
+  color: #007bff;
+  margin-bottom: 5px;
+}
+
+.cookie-option p {
+  font-size: 0.9em;
+  color: #555;
+}
+
+.cookie-option a {
+  color: #007bff;
+  text-decoration: none;
+}
+
+.cookie-option a:hover {
+  text-decoration: underline;
+}
+
+.confirm-btn {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 10px 25px;
+  background-color: #007bff;
+  color: #ffffff;
+  font-size: 1em;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.confirm-btn:hover {
+  background-color: #0056b3;
+}
+
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  font-weight: bold;
+  color: #999;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+.close-btn:hover {
+  color: #333;
+}
