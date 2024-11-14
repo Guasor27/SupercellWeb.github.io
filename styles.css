@@ -211,10 +211,6 @@ footer {
   display: inline-block;
 }
 
-.app-logo {
-  transition: transform 0.2s; /* Efecto de hover */
-}
-
 .app-store-logo {
   width: 170px; /* Tamaño específico para App Store */
   height: auto;
@@ -223,6 +219,10 @@ footer {
 .play-store-logo {
   width: 152px; /* Tamaño específico para Google Play */
   height: auto;
+}
+
+.app-logo {
+  transition: transform 0.2s; /* Efecto de hover */
 }
 
 .app-logo:hover {
@@ -242,6 +242,10 @@ footer {
   margin-top: 10px;
 }
   
+
+
+
+
 /* Estilos para el modal de cookies */
 .cookie-modal {
   display: none; /* Oculto por defecto */
