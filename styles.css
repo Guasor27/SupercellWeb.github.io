@@ -162,90 +162,6 @@ main {
   color: #005bb5; /* Cambia el color del texto al hacer hover (opcional) */
 }
 
-
-/* Footer */
-footer {
-  background-color: #000;
-  color: white;
-  padding: 20px 0;
-  text-align: center;
-  width: 100%; /* Ocupa toda la parte inferior de la página */
-}
-
-.footer-content {
-  max-width: 1200px;
-  margin: auto;
-}
-
-.social-icons a {
-  color: white;
-  margin: 0 10px;
-  font-size: 20px;
-  text-decoration: none;
-}
-
-.footer-links {
-  margin: 10px 0;
-}
-
-.footer-links a {
-  color: #ccc;
-  margin: 0 10px;
-  text-decoration: none;
-  font-size: 14px;
-}
-
-.footer-links a:hover {
-  text-decoration: underline;
-}
-
-.app-links {
-  display: flex;
-  gap: 20px;
-  justify-content: center;
-  align-items: center; /* Centra los elementos horizontalmente */
-  margin-top: 20px;
-}
-
-.app-links a {
-  display: inline-block;
-}
-
-.app-store-logo {
-  width: 170px; /* Tamaño específico para App Store */
-  height: auto;
-}
-
-.play-store-logo {
-  width: 152px; /* Tamaño específico para Google Play */
-  height: auto;
-}
-
-.app-logo {
-  transition: transform 0.2s; /* Efecto de hover */
-}
-
-.app-logo:hover {
-  transform: scale(1.1); /* Aumenta ligeramente el tamaño en hover */
-}
-
-
-.company-info {
-  margin: 10px 0;
-  font-size: 14px;
-  color: #ccc;
-}
-
-.footer-logo {
-  width: 80px;
-  height: auto;
-  margin-top: 10px;
-}
-  
-
-
-
-
 /* Estilos para el modal de cookies */
 .cookie-modal {
   display: none; /* Oculto por defecto */
@@ -343,4 +259,82 @@ footer {
 
 .close-btn:hover {
   color: #333;
+}
+
+/* Footer */
+footer {
+  background-color: #000;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+  width: 100%; /* Ocupa toda la parte inferior de la página */
+}
+
+.footer-content {
+  max-width: 1200px;
+  margin: auto;
+}
+
+.social-icons a {
+  color: white;
+  margin: 0 10px;
+  font-size: 20px;
+  text-decoration: none;
+}
+
+.footer-links {
+  margin: 10px 0;
+}
+
+.footer-links a {
+  color: #ccc;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+.footer-links a:hover {
+  text-decoration: underline;
+}
+
+.app-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 20px;
+}
+
+.app-links a {
+  display: inline-block;
+}
+
+.app-store-logo {
+  width: 170px; /* Tamaño específico para App Store */
+  height: auto;
+}
+
+.play-store-logo {
+  width: 152px; /* Tamaño específico para Google Play */
+  height: auto;
+}
+
+.app-logo {
+  transition: transform 0.2s; /* Efecto de hover */
+}
+
+.app-logo:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño en hover */
+}
+
+.company-info {
+  margin: 10px 0;
+  font-size: 14px;
+  color: #ccc;
+}
+
+.footer-logo {
+  width: 80px;
+  height: auto;
+  margin-top: 10px;
 }
