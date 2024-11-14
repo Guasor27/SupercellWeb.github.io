@@ -199,19 +199,36 @@ footer {
   text-decoration: underline;
 }
 
+.app-links {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: center; /* Centra los elementos horizontalmente */
+  margin-top: 20px;
+}
+
 .app-links a {
-  color: white;
-  background: #333;
-  padding: 10px 15px;
-  margin: 10px;
-  border-radius: 5px;
-  text-decoration: none;
   display: inline-block;
 }
 
-.app-links a:hover {
-  background: #555;
+.app-logo {
+  transition: transform 0.2s; /* Efecto de hover */
 }
+
+.app-store-logo {
+  width: 170px; /* Tamaño específico para App Store */
+  height: auto;
+}
+
+.play-store-logo {
+  width: 152px; /* Tamaño específico para Google Play */
+  height: auto;
+}
+
+.app-logo:hover {
+  transform: scale(1.1); /* Aumenta ligeramente el tamaño en hover */
+}
+
 
 .company-info {
   margin: 10px 0;

