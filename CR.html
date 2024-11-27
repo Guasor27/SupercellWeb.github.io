@@ -12,15 +12,17 @@
     <header>
         <div class="header-container">
             <img src="Image/CR_Logo.png" alt="Clash Royale Logo" class="logo">
-            <button class="login-button" onclick="window.location.href='Registro.html'">Iniciar sesión con ID de Supercell</button>
+            <button class="profile-button" onclick="window.location.href='Mi_Perfil.html'">
+                <i class="fas fa-user"></i> <!-- Icono de usuario -->
+            </button>
         </div>
     </header>
 
     <!-- Cuerpo principal -->
     <main class="gems-container">
         <div class="gem-item">
-            <a href="#">
-                <img src="Image/CR_Uno.png" alt="Cofre de gemas" class="gem-image">
+            <a onclick="addToCart('Puñado de gemas', 80)">
+                <img src="Image/CR_Uno.png" alt="Puñado de gemas" class="gem-image">
             </a>
             <div class="price">
                 <div class="coin-wrapper">
@@ -30,8 +32,8 @@
             </div>
         </div>
         <div class="gem-item">
-            <a href="#">
-                <img src="Image/CR_Dos.png" alt="Caja de gemas" class="gem-image">
+            <a onclick="addToCart('Bolsa de gemas', 500)">
+                <img src="Image/CR_Dos.png" alt="Bolsa de gemas" class="gem-image">
             </a>
             <div class="price">
                 <div class="coin-wrapper">
@@ -41,8 +43,8 @@
             </div>
         </div>
         <div class="gem-item">
-            <a href="#">
-                <img src="Image/CR_Tres.png" alt="Saco de gemas" class="gem-image">
+            <a onclick="addToCart('Barril de gemas', 1200)">
+                <img src="Image/CR_Tres.png" alt="Barril de gemas" class="gem-image">
             </a>
             <div class="price">
                 <div class="coin-wrapper">
@@ -52,7 +54,7 @@
             </div>
         </div>
         <div class="gem-item">
-            <a href="#">
+            <a onclick="addToCart('Bolsa de gemas', 5000)">
                 <img src="Image/CR_Cuatro.png" alt="Bolsa de gemas" class="gem-image">
             </a>
             <div class="price">
@@ -63,7 +65,7 @@
             </div>
         </div>
         <div class="gem-item">
-            <a href="#">
+            <a onclick="addToCart('Pila de gemas', 12000)">
                 <img src="Image/CR_Cinco.png" alt="Pila de gemas" class="gem-image">
             </a>
             <div class="price">
@@ -75,10 +77,9 @@
         </div>
     </main>
     
-    
-    
-    <!-- Footer fijo -->
 
+      
+    <!-- Footer fijo -->
     <footer>
         <div class="footer-content">
         <div class="social-icons">
@@ -111,6 +112,7 @@
         </div>
     </footer>
 
-    <script src="script.js"></script>
+    
+    <script src="perfil.js"></script>
 </body>
 </html>

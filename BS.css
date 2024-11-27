@@ -56,19 +56,31 @@ header {
     height: auto;
 }
 
-.login-button {
+  /* Botón de perfil circular */
+  .profile-button {
     background-color: #000000;
     color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
+    padding: 10px;
+    border-radius: 50%;  /* Círculo */
     cursor: pointer;
-}
-
-.login-button:hover {
-    background-color: #005bb5;
-}
-
+    width: 40px;
+    height: 40px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 18px;
+    border: none;
+  }
+  
+  .profile-button i {
+    font-size: 18px; /* Tamaño del icono */
+  }
+  
+  .profile-button:hover {
+    background-color: #474747; /* Cambia el color del fondo a negro cuando se pasa el mouse */
+    color: #ffffff; /* Cambia el color del icono a blanco */
+  }
 /* Cuerpo principal */
 .gems-container {
     display: grid;

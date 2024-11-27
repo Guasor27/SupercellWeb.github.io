@@ -338,3 +338,31 @@ footer {
   height: auto;
   margin-top: 10px;
 }
+
+/* Botones de perfil y cierre de sesión */
+.profile-button {
+  background-color: #007bff;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-right: 10px;
+}
+
+.profile-button:hover {
+  background-color: #0056b3;
+}
+
+.logout-button {
+  background-color: #ff4444;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.logout-button:hover {
+  background-color: #cc0000;
+}

